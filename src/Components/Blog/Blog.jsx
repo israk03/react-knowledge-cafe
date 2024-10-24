@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { BiSolidBookmarks } from "react-icons/bi";
 
-export default function Blog({blog, handleAddToBookmarks}) {
+export default function Blog({blog, handleAddToBookmarks, handleMarkAsRead}) {
 
     const {id, cover, title, author, author_img, posted_date, reading_time, hashtags} = blog;
   return (
@@ -28,6 +28,7 @@ export default function Blog({blog, handleAddToBookmarks}) {
                 hashtags.map((hash, idx)=> <span key={idx}><a href="">#{hash}</a></span>)
             }
         </p>
+        <button className="text-violet-800 mb-2 underline" onClick={()=> handleMarkAsRead(reading_time)}>Mark As Read</button>
 
     </div>
   )
