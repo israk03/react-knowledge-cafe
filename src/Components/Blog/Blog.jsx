@@ -28,7 +28,7 @@ export default function Blog({blog, handleAddToBookmarks, handleMarkAsRead}) {
                 hashtags.map((hash, idx)=> <span key={idx}><a href="">#{hash}</a></span>)
             }
         </p>
-        <button className="text-violet-800 mb-2 underline" onClick={()=> handleMarkAsRead(reading_time)}>Mark As Read</button>
+        <button className="text-violet-800 mb-2 underline" onClick={()=> handleMarkAsRead(id, reading_time)}>Mark As Read</button>
 
     </div>
   )

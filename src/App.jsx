@@ -9,8 +9,11 @@ function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const [readingTime, setReadingTime] = useState(0);
 
-  const handleMarkAsRead = time => {
+  const handleMarkAsRead = (id, time) => {
     setReadingTime(readingTime + time);
+
+    const remainningBookmarks = bookmarks.filter(bookmark => bookmark.id !== id);
+    setBookmarks(remainningBookmarks);
   }
 
   const handleAddToBookmarks = blog => {
