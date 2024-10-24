@@ -18,7 +18,7 @@ export default function Blog({blog, handleAddToBookmarks}) {
             </div>
             <div className="flex items-center">
                 <span>{reading_time} min read</span>
-                <button className="ml-2 text-red-500 text-2xl" onClick={handleAddToBookmarks}><BiSolidBookmarks /></button>
+                <button className="ml-2 text-red-500 text-2xl" onClick={()=>handleAddToBookmarks(blog)}><BiSolidBookmarks /></button>
 
             </div>
         </div>
