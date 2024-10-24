@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { useState } from 'react'
 
@@ -11,10 +11,10 @@ export default function Blogs() {
         .then(data => setBlogs(data))
     }, []);
 
-    
-  return (
-    <div>
 
+  return (
+    <div className='md:w-2/3'>
+        <h2>Blogs: {blogs.length}</h2>
     </div>
   )
 }
