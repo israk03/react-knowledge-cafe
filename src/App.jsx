@@ -1,4 +1,6 @@
 import './App.css'
+import Header from './Components/Header/Header'
+import Blogs from './Components/Blogs/Blogs'
 
 function App() {
 
@@ -6,7 +8,9 @@ function App() {
   return (
     <>
 
-      <h1 className='text-4xl bg-slate-400'>My Knowledge Cafe</h1>
+      <Header></Header>
+      <Blogs></Blogs>
+    
 
     </>
   )
